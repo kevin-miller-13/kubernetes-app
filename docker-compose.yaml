@@ -1,0 +1,15 @@
+version : "1.0"
+services:
+ csharp:
+  build:
+   context: .
+  container_name: csharp
+  image: kcjmiller13/csharp:1.0.0
+  ports:
+   - 5002:5002  
+  volumes:
+   - ./:/work
+  # working_dir : /work
+  # entrypoint: /bin/bash
+  # stdin_open: true
+  # tty: true 

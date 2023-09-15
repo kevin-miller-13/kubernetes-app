@@ -1,0 +1,19 @@
+apiVersion: helm.fluxcd.io/v1
+kind: HelmRelease
+metadata:
+  name: KubertnetesTestApp
+  namespace: default
+  annotations:
+    fluxcd.io/automated: "false"
+    fluxcd.io/tag.chart-image: semver:~4.0
+spec:
+  releaseName: KubertnetesTestApp
+  chart:
+    repository: https://halkeye.github.io/helm-charts/
+    name: thelounge
+    version: 4.3.0
+  values:
+    ingress:
+      enabled: true
+      hosts:
+        - Kevin.Com
