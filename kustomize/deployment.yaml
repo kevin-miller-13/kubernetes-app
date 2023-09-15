@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: mywebapp
-        image: kcjmiller13/csharp:2.0.0
+        image: kcjmiller13/csharp:1.0.0
         imagePullPolicy: Always
         ports:
         - containerPort: 5002
